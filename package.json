@@ -1,0 +1,23 @@
+{
+  "name": "practice-set-up",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/guy-stapleton/practice-set-up.git",
+  "author": "Guy Stapleton <guy.stapleton+1@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "jest": "^22.1.4",
+    "knex": "^0.14.2",
+    "sqlite3": "^3.1.13"
+  },
+  "scripts": {
+    "debug": "nodemon --inspect index --ignore data.json",
+    "test": "jest --watch --noStackTrace",
+    "start": "node index"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  }
+}
