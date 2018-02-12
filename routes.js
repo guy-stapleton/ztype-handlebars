@@ -8,7 +8,19 @@ routes.get('/', (req, res) => {
 })
 
 routes.get('/home', (req, res) => {
-  res.render('index', {greeting: 'Hello World'})
+  res.render('index', {})
+})
+
+routes.get('/add', (req, res) => {
+  res.render('add', {})
+})
+
+routes.get('/recent-scores', (req, res) => {
+  res.render('recent-scores')
+})
+
+routes.get('/highscores', (req, res) => {
+  res.render('highscores', {})
 })
 
 
