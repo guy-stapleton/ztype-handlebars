@@ -32,6 +32,10 @@ li, a  {
   line-height: 1.8em;
 }
 
+input {
+  margin-top: 1em;
+}
+
 a, a:active {
   color: #FFF;
 }
