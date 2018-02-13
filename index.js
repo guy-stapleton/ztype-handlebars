@@ -1,6 +1,6 @@
 var server = require('./server')
 var knex = require('knex')
-var config = require('./knexfile').development
+var config = require('./knexfile')[environment]
 var db = knex(config)
 
 var app = server(db)
