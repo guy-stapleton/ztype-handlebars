@@ -39,7 +39,18 @@ routes.get('/add/score-added', (req, res) => {
 })
 
 routes.get('/recent-scores', (req, res) => {
-  res.render('recent-scores')
+  var db = req.app.get('db')
+
+  db('scores')
+    .select('score')
+    .then(scores => {
+      var obj = {scores: scores}
+      console.log(obj)
+      res.render('recent-scores', obj)
+    })
+    .catch(err => {
+      res.send(`Yikes an error has hit`)
+    })
 })
 
 routes.get('/highscores', (req, res) => {
@@ -48,7 +59,7 @@ routes.get('/highscores', (req, res) => {
   // db('scores')
   //   .select('scores')
   //   .then(result => {
-      res.render('highscores', result)
+      res.render('highscores')
     // })
     // .catch(err => {
     //   res.send('Yikes an error ${err.message}')
