@@ -1,5 +1,5 @@
 {
-  "name": "Ztype score tracker in Handlebars",
+  "name": "ztype-score-tracker-in-handlebars",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/guy-stapleton/practice-set-up.git",
@@ -15,6 +15,7 @@
   },
   "scripts": {
     "debug": "nodemon --inspect index",
+    "dev": "nodemon --inspect index",
     "test": "jest --watch --noStackTrace",
     "start": "node index",
     "postinstall": "knex migrate:latest"
