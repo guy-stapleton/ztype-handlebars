@@ -20,16 +20,18 @@ h2 {
   font-size: 1.8em;
 }
 
-nav {
+nav, a {
   margin-top: 3em;
+  text-decoration: none;
 }
 
-
-li, a  {
-  list-style-type: none;
-  text-decoration: none;
-  font-size: 1.1em;
+ol li, ul li, a  {
+  font-size: 1.15em;
   line-height: 1.8em;
+}
+
+ul li {
+  list-style-type: none;
 }
 
 input {
