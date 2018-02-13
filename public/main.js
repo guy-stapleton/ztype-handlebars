@@ -1,4 +1,4 @@
-var data = [40, 280, 160, 230, 170, 90]
+var data = [203, 198, 405, 303, 322]
 
 // document.getElementById('graph').innerHTML = 'Hello Guy'
 
