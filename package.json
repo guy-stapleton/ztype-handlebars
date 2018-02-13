@@ -1,5 +1,5 @@
 {
-  "name": "practice-set-up",
+  "name": "Ztype score tracker in Handlebars",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/guy-stapleton/practice-set-up.git",
@@ -9,18 +9,18 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
-    "jest": "^22.1.4",
     "knex": "^0.14.2",
     "pg": "^7.4.1",
     "sqlite3": "^3.1.13"
   },
   "scripts": {
-    "debug": "nodemon --inspect index --ignore data.json",
+    "debug": "nodemon --inspect index",
     "test": "jest --watch --noStackTrace",
     "start": "node index",
     "postinstall": "knex migrate:latest"
   },
   "devDependencies": {
+    "jest": "^22.1.4",
     "nodemon": "^1.14.11"
   }
 }
