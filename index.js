@@ -1,5 +1,8 @@
 var server = require('./server')
+
+
 var knex = require('knex')
+var environment = process.env.NODE_ENV || 'development'
 var config = require('./knexfile')[environment]
 var db = knex(config)
 
