@@ -43,10 +43,15 @@ routes.get('/recent-scores', (req, res) => {
 
   db('scores')
     .select('score')
-    .then(scores => {
-      var obj = {scores: scores}
-      console.log(obj)
-      res.render('recent-scores', obj)
+    .then(result => {
+
+      var vals = result.map(item => {
+        return item.score
+      })
+      var lastFiveScores = (vals.slice(0, 5))
+      // var obj = {lastFiveScores}
+      // console.log(obj)
+      res.render('recent-scores', result)
     })
     .catch(err => {
       res.send(`Yikes an error has hit`)
