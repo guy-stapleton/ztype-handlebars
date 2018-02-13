@@ -54,16 +54,25 @@ routes.get('/recent-scores', (req, res) => {
 })
 
 routes.get('/highscores', (req, res) => {
-  // var db = req.app.get('db')
-  //
-  // db('scores')
-  //   .select('scores')
-  //   .then(result => {
-      res.render('highscores')
-    // })
-    // .catch(err => {
-    //   res.send('Yikes an error ${err.message}')
-    // })
+  var db = req.app.get('db')
+
+  db('scores')
+    .select('score')
+    .orderBy('score')
+    .then(result => {
+
+      var vals = result.map(item => {
+        return item.score
+      })
+      var rev = vals.reverse()
+      var topFiveScores = (rev.slice(0, 5))
+      var obj = {topFiveScores}
+      console.log(obj)
+      res.render('highscores', obj)
+    })
+    .catch(err => {
+      res.send('Yikes an error ${err.message}')
+    })
 
 })
 

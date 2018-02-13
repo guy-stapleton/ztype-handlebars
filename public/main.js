@@ -1,5 +1,3 @@
-console.log('hello world')
-
 var data = [40, 280, 160, 230, 170, 90]
 
 // document.getElementById('graph').innerHTML = 'Hello Guy'
